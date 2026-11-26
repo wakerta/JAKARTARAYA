@@ -3,88 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wisata Jakarta Raya</title>
+    <title>Jakarta Destinations - Jelajah Wisata Jakarta Raya</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background: #f0f4f8; color: #333; }
-        header { background: linear-gradient(135deg, #d84315, #bf360c); color: white; text-align: center; padding: 2.5rem 1rem; }
-        header h1 { margin: 0; font-size: 2rem; }
-        header p { margin: 0.5rem 0 0; opacity: 0.9; }
-        .container { max-width: 850px; margin: 2rem auto; padding: 0 1rem; display: grid; gap: 1.5rem; }
-        .card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.08); }
-        .card img { width: 100%; height: auto; display: block; background: #ddd; }
-        .card-body { padding: 1.5rem; }
-        .card-body h2 { margin-top: 0; color: #d84315; }
-        .tiket-box { background: #fff3e0; border-left: 4px solid #d84315; padding: 0.9rem 1rem; margin-top: 1rem; border-radius: 4px; font-size: 0.95rem; }
-        .tiket-box strong { color: #bf360c; display: block; margin-bottom: 0.3rem; }
-        .tiket-box ul { margin: 0; padding-left: 1.2rem; }
-        .tiket-box li { margin-bottom: 0.2rem; }
-        footer { text-align: center; padding: 1.5rem; background: #263238; color: white; margin-top: 2rem; font-size: 0.9rem; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f8f9fa; color: #333; }
+
+        /* Navbar Transparan di Atas Foto */
+        nav {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 5%;
+            z-index: 10;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.65), transparent);
+        }
+        .logo { color: #f5b942; font-size: 1.5rem; font-weight: bold; letter-spacing: 1px; text-decoration: none; }
+        .logo span { display: block; font-size: 0.65rem; letter-spacing: 3px; color: #fff; font-weight: normal; }
+        .nav-links { display: flex; gap: 1.8rem; list-style: none; }
+        .nav-links a { color: white; text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover { color: #f5b942; }
+
+        /* Hero Banner Layar Penuh */
+        .hero {
+            position: relative;
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55)), url('monas.jpg') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 1.5rem;
+        }
+        .hero h1 { font-size: 3rem; margin-bottom: 0.8rem; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
+        .hero p { font-size: 1.2rem; max-width: 650px; opacity: 0.95; text-shadow: 0 1px 6px rgba(0,0,0,0.5); }
+        .hero-dots { position: absolute; bottom: 25px; display: flex; gap: 8px; }
+        .dot { width: 28px; height: 4px; background: rgba(255,255,255,0.4); border-radius: 2px; }
+        .dot.active { background: #f5b942; }
+
+        /* Tombol Melayang Buy Ticket (Pojok Kanan Bawah) */
+        .btn-ticket {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #e5b83b;
+            color: #1a1a1a;
+            font-weight: bold;
+            padding: 0.9rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 99;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.2s, background 0.2s;
+        }
+        .btn-ticket:hover { background: #f5c748; transform: translateY(-2px); }
+
+        /* Bagian Daftar Destinasi */
+        .section { max-width: 1100px; margin: 4rem auto; padding: 0 1.5rem; }
+        .section-title { text-align: center; margin-bottom: 2.5rem; }
+        .section-title h2 { font-size: 2rem; color: #1a1a1a; }
+        .section-title p { color: #666; margin-top: 0.4rem; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 2rem; }
+        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08); display: flex; flex-direction: column; }
+        .card img { width: 100%; height: auto; display: block; }
+        .card-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .card-body h3 { color: #b8860b; margin-bottom: 0.6rem; font-size: 1.3rem; }
+        .card-body p { color: #555; font-size: 0.95rem; line-height: 1.5; margin-bottom: 1rem; }
+        .tiket-info { background: #fdf8eb; border-left: 4px solid #e5b83b; padding: 0.8rem 1rem; font-size: 0.88rem; border-radius: 4px; }
+        .tiket-info ul { padding-left: 1.1rem; margin-top: 0.3rem; color: #333; }
+
+        footer { background: #1a1a1a; color: #ccc; text-align: center; padding: 2rem 1rem; margin-top: 4rem; font-size: 0.9rem; }
+
+        /* Responsif untuk layar HP */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2rem; }
+        }
     </style>
 </head>
 <body>
-    <header>
+
+    <!-- Navigasi Atas -->
+    <nav>
+        <a href="#" class="logo">jakarta<span>DESTINATIONS</span></a>
+        <ul class="nav-links">
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#destinations">Packages & Offers</a></li>
+            <li><a href="#destinations">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <!-- Banner Utama Layar Penuh -->
+    <header class="hero">
         <h1>Jelajah Wisata Jakarta Raya</h1>
-        <p>Panduan destinasi ikonik lengkap dengan informasi tiket masuk</p>
+        <p>Temukan pesona sejarah, budaya, dan ikon kebanggaan ibu kota dalam satu perjalanan tak terlupakan.</p>
+        <div class="hero-dots">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
     </header>
 
-    <main class="container">
-        <!-- Destinasi 1 -->
-        <div class="card">
-            <img src="monas.jpg" alt="Monumen Nasional Jakarta">
-            <div class="card-body">
-                <h2>1. Monumen Nasional (Monas)</h2>
-                <p>Ikon kebanggaan ibu kota setinggi 132 meter yang menyimpan sejarah perjuangan kemerdekaan Indonesia serta pemandangan kota Jakarta dari pelataran puncak.</p>
-                <div class="tiket-box">
-                    <strong>Informasi Tiket & Jam Buka:</strong>
-                    <ul>
-                        <li><b>Area Taman:</b> Gratis (Selasa–Minggu, 06.00–22.00 WIB)</li>
-                        <li><b>Tiket Museum & Cawan:</b> Dewasa Rp8.000 | Mahasiswa Rp5.000 | Anak/Pelajar Rp3.000</li>
-                        <li><b>Tiket Pelataran Puncak:</b> Dewasa Rp24.000 | Mahasiswa Rp13.000 | Anak/Pelajar Rp6.000</li>
-                        <li><b>Catatan:</b> Senin tutup. Pembayaran menggunakan kartu JakCard.</li>
-                    </ul>
+    <!-- Tombol Melayang Buy Ticket -->
+    <a href="#destinations" class="btn-ticket">🎟️ Buy Ticket</a>
+
+    <!-- Daftar Destinasi & Tiket -->
+    <section id="destinations" class="section">
+        <div class="section-title">
+            <h2>Destinasi Populer Jakarta</h2>
+            <p>Pilih tujuan wisata favorit Anda beserta informasi harga tiket masuk terbaru</p>
+        </div>
+
+        <div class="grid">
+            <!-- Kartu 1 -->
+            <div class="card">
+                <img src="monas.jpg" alt="Monumen Nasional">
+                <div class="card-body">
+                    <div>
+                        <h3>Monumen Nasional (Monas)</h3>
+                        <p>Ikon kemerdekaan Indonesia setinggi 132 meter dengan museum sejarah dan pelataran puncak panorama kota Jakarta.</p>
+                    </div>
+                    <div class="tiket-info">
+                        <strong>Tiket Masuk & Jam Buka:</strong>
+                        <ul>
+                            <li>Taman: Gratis (06.00–22.00 WIB)</li>
+                            <li>Museum: Dewasa Rp8.000 | Pelajar Rp3.000</li>
+                            <li>Puncak: Dewasa Rp24.000 | Pelajar Rp6.000</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kartu 2 -->
+            <div class="card">
+                <img src="kotatua.jpg" alt="Kota Tua Jakarta">
+                <div class="card-body">
+                    <div>
+                        <h3>Kawasan Kota Tua Jakarta</h3>
+                        <p>Menjelajahi bangunan bersejarah peninggalan era Batavia, Museum Fatahillah, serta suasana klasik Taman Fatahillah.</p>
+                    </div>
+                    <div class="tiket-info">
+                        <strong>Tiket Masuk & Jam Buka:</strong>
+                        <ul>
+                            <li>Area Taman Fatahillah: Gratis</li>
+                            <li>Museum: Rp10.000 (Weekday) / Rp15.000 (Weekend)</li>
+                            <li>Pelajar/Anak: Rp5.000 (Tutup hari Senin)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kartu 3 -->
+            <div class="card">
+                <img src="tamanmini.jpg" alt="Taman Mini Indonesia Indah">
+                <div class="card-body">
+                    <div>
+                        <h3>Taman Mini Indonesia Indah</h3>
+                        <p>Taman rekreasi budaya yang merangkum kekayaan rumah adat, museum, kereta gantung, dan pertunjukan Nusantara.</p>
+                    </div>
+                    <div class="tiket-info">
+                        <strong>Tiket Masuk & Jam Buka:</strong>
+                        <ul>
+                            <li>Pengunjung: Rp25.000 (Weekday) / Rp35.000 (Weekend)</li>
+                            <li>Kendaraan: Motor Rp15.000 | Mobil Rp35.000</li>
+                            <li>Buka setiap hari pukul 05.00–20.00 WIB</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- Destinasi 2 -->
-        <div class="card">
-            <img src="kotatua.jpg" alt="Kota Tua Jakarta">
-            <div class="card-body">
-                <h2>2. Kawasan Kota Tua & Museum Fatahillah</h2>
-                <p>Kawasan bersejarah peninggalan era Batavia dengan gedung-gedung bergaya arsitektur kolonial klasik, museum seni, serta area sepeda ontel di Taman Fatahillah.</p>
-                <div class="tiket-box">
-                    <strong>Informasi Tiket & Jam Buka:</strong>
-                    <ul>
-                        <li><b>Kawasan Taman Fatahillah:</b> Gratis</li>
-                        <li><b>Tiket Masuk Museum:</b> Dewasa Rp10.000 (Hari Kerja) / Rp15.000 (Akhir Pekan)</li>
-                        <li><b>Mahasiswa / Pelajar / Anak:</b> Rp5.000</li>
-                        <li><b>Jam Operasional Museum:</b> Selasa–Minggu, 09.00–15.00 WIB (Senin tutup)</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Destinasi 3 -->
-        <div class="card">
-            <img src="tamanmini.jpg" alt="Taman Mini Indonesia Indah">
-            <div class="card-body">
-                <h2>3. Taman Mini Indonesia Indah (TMII)</h2>
-                <p>Taman rekreasi budaya yang menampilkan anjungan rumah adat dari seluruh provinsi di Indonesia, kereta gantung, museum tematik, hingga pertunjukan air mancur menari.</p>
-                <div class="tiket-box">
-                    <strong>Informasi Tiket & Jam Buka:</strong>
-                    <ul>
-                        <li><b>Tiket Masuk Pengunjung:</b> Rp25.000 (Hari Kerja) | Rp35.000 (Akhir Pekan)</li>
-                        <li><b>Tiket Kendaraan:</b> Motor Rp15.000–Rp20.000 | Mobil Rp35.000</li>
-                        <li><b>Jam Operasional:</b> Setiap hari, 05.00–20.00 WIB</li>
-                        <li><b>Catatan:</b> Wahana khusus (Kereta Gantung, Taman Burung, dll.) dikenakan tiket terpisah.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Proyek Wisata Jakarta Raya | Dibuat dengan GitHub Pages</p>
+    <footer id="about">
+        <p>&copy; 2026 Jakarta Destinations - Proyek Wisata Jakarta Raya</p>
     </footer>
+
 </body>
 </html>
