@@ -26,6 +26,42 @@
         .nav-links { display: flex; gap: 1.8rem; list-style: none; }
         .nav-links a { color: white; text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.3s; }
         .nav-links a:hover { color: #f5b942; }
+/* Dropdown Menu Destinations */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none; /* Sembunyikan menu secara default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(17, 17, 17, 0.92); /* Kotak hitam transparan */
+    min-width: 190px;
+    list-style: none;
+    padding: 0.5rem 0;
+    border-radius: 6px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    z-index: 20;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 0.65rem 1.2rem;
+    color: #ffffff;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.dropdown-menu li a:hover {
+    background-color: rgba(245, 185, 66, 0.15);
+    color: #f5b942;
+}
+
+/* Munculkan kotak menu saat kursor menyentuh Destinations */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
 
        /* Hero Banner Layar Penuh */
 .hero {
