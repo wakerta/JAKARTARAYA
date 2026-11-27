@@ -5,6 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jakarta Destinations</title>
     <style>
+        /* Tombol Kembali ke Atas */
+.btn-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #f5b942;
+    color: #111111;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 99;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-top:hover {
+    background-color: #ffca5c;
+    transform: translateY(-4px);
+}
+
         .card img {
             width: 100% !important;
             height: 180px !important;
