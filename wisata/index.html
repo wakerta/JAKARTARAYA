@@ -284,7 +284,7 @@
     </div>
 
     <!-- KARTU 2: KOTA TUA -->
-    <div class="card card-clickable" id="Kawasankotatua" onclick="bukaModal('modal-Kawasankotatua')">
+    <div class="card card-clickable" id="kotatua" onclick="bukaModal('modal-kotatua')">
         <img src="kotatua.jpg" alt="Kawasan Kota Tua Jakarta">
         <div class="card-content">
             <h3>Kawasan Kota Tua Jakarta</h3>
@@ -302,7 +302,7 @@
     </div>
 
     <!-- KARTU 3: TMII -->
-   <div class="card card-clickable" id="TMII" onclick="bukaModal('modal-TMII')">
+   <div class="card card-clickable" id="tmii" onclick="bukaModal('modal-tmii')">
         <img src="tamanmini.jpg" alt="Taman Mini Indonesia Indah">
         <div class="card-content">
             <h3>Taman Mini Indonesia Indah</h3>
@@ -321,7 +321,7 @@
     </div>
 
     <!-- KARTU 4: ANCOL -->
-    <div class="card card-clickable" id="Ancol" onclick="bukaModal('modal-Ancol')">
+    <div class="card card-clickable" id="ancol" onclick="bukaModal('modal-ancol')">
         <img src="../ancol.jpg" alt="ANCOL">
         <div class="card-content">
             <h3>Taman Impian Ancol</h3>
@@ -339,7 +339,7 @@
     </div>
 
     <!-- KARTU 5: KEPULAUAN SERIBU -->
-    <div class="card card-clickable" id="monas" onclick="bukaModal('modal-monas')">
+    <div class="card card-clickable" id="kepulauanseribus" onclick="bukaModal('modal-kepulauanseribu')">
         <img src="../pulauseribu.jpg" alt="Kepulauan Seribu">
         <div class="card-content">
             <h3>Kepulauan Seribu</h3>
@@ -361,6 +361,136 @@
 <footer id="about">
     <p>&copy; 2026 Jakarta Destinations - Proyek Wisata Jakarta Raya</p>
 </footer>
+     <!-- MODAL 1: MONAS -->
+    <div id="modal-monas" class="modal" onclick="tutupLuar(event, 'modal-monas')">
+        <div class="modal-box">
+            <span class="close-btn" onclick="tutupModal('modal-monas')">&times;</span>
+            <img src="monas.jpg" alt="Monumen Nasional">
+            <h2>Monumen Nasional (Monas)</h2>
+            <p><strong>Lokasi:</strong> Gambir, Jakarta Pusat (Kawasan Medan Merdeka seluas 80 hektare).</p>
+            <h4>1. Sejarah Singkat</h4>
+            <p>Monas mulai dibangun pada 17 Agustus 1961 atas gagasan Presiden Soekarno dan diresmikan pada 12 Juli 1975. Tugu setinggi 132 meter ini dimahkotai lidah api berlapis lembaran emas sebagai simbol semangat perjuangan kemerdekaan rakyat Indonesia.</p>
+            <h4>2. Daya Tarik Utama</h4>
+            <ul>
+                <li><strong>Museum Sejarah Nasional:</strong> Terletak di ruang bawah tanah dengan 51 jendela diorama perjalanan sejarah Indonesia.</li>
+                <li><strong>Ruang Kemerdekaan:</strong> Menyimpan simbol kenegaraan seperti naskah asli Proklamasi dan bendera pusaka.</li>
+                <li><strong>Pelataran Puncak (115 m):</strong> Pemandangan 360 derajat kota Jakarta dari puncak tugu.</li>
+            </ul>
+            <h4>3. Akses Transportasi</h4>
+            <ul>
+                <li><strong>KRL Commuter Line:</strong> Stasiun Juanda atau Stasiun Gondangdia (jalan kaki ±10 menit).</li>
+                <li><strong>TransJakarta:</strong> Halte Monumen Nasional (Koridor 1, 2, dan 3).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- MODAL 2: KOTA TUA -->
+    <div id="modal-kotatua" class="modal" onclick="tutupLuar(event, 'modal-kotatua')">
+        <div class="modal-box">
+            <span class="close-btn" onclick="tutupModal('modal-kotatua')">&times;</span>
+            <img src="kotatua.jpg" alt="Kawasan Kota Tua Jakarta">
+            <h2>Kawasan Kota Tua Jakarta</h2>
+            <p><strong>Lokasi:</strong> Pinangsia, Taman Sari, Jakarta Barat.</p>
+            <h4>1. Sejarah Singkat</h4>
+            <p>Dikenal sebagai <em>Oud Batavia</em>, kawasan ini merupakan pusat pemerintahan dan perdagangan VOC pada abad ke-17 hingga ke-18 dengan arsitektur bergaya Eropa klasik yang masih terawat.</p>
+            <h4>2. Daya Tarik & Museum Utama</h4>
+            <ul>
+                <li><strong>Museum Sejarah Jakarta (Museum Fatahillah):</strong> Gedung bekas balai kota era Belanda dengan koleksi sejarah Jakarta.</li>
+                <li><strong>Museum Wayang & Museum Seni Rupa dan Keramik:</strong> Koleksi wayang Nusantara dan karya seni bersejarah.</li>
+                <li><strong>Taman Fatahillah & Sepeda Onthel:</strong> Area terbuka untuk bersantai dan berfoto klasik.</li>
+            </ul>
+            <h4>3. Akses Transportasi</h4>
+            <ul>
+                <li><strong>KRL Commuter Line:</strong> Turun di Stasiun Jakarta Kota (jalan kaki ±3 menit).</li>
+                <li><strong>TransJakarta:</strong> Halte Kota (Koridor 1 dan Koridor 12).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- MODAL 3: TMII -->
+    <div id="modal-tmii" class="modal" onclick="tutupLuar(event, 'modal-tmii')">
+        <div class="modal-box">
+            <span class="close-btn" onclick="tutupModal('modal-tmii')">&times;</span>
+            <img src="tamanmini.jpg" alt="Taman Mini Indonesia Indah">
+            <h2>Taman Mini Indonesia Indah (TMII)</h2>
+            <p><strong>Lokasi:</strong> Cipayung, Jakarta Timur (Luas kawasan sekitar 150 hektare).</p>
+            <h4>1. Konsep & Sejarah</h4>
+            <p>Diresmikan pada 20 April 1975, TMII merangkum kebudayaan bangsa Indonesia dari Sabang sampai Merauke dalam satu kawasan wisata edukatif.</p>
+            <h4>2. Daya Tarik Utama</h4>
+            <ul>
+                <li><strong>Anjungan Daerah 38 Provinsi:</strong> Replika rumah adat dan pertunjukan seni khas tiap provinsi.</li>
+                <li><strong>Kereta Gantung (Skylift):</strong> Menyaksikan miniatur kepulauan Indonesia di Danau Archipelago dari ketinggian.</li>
+                <li><strong>Taman Burung & Dunia Air Tawar:</strong> Wahana konservasi satwa unggas dan biota air tawar.</li>
+            </ul>
+            <h4>3. Akses Transportasi</h4>
+            <ul>
+                <li><strong>LRT Jabodebek:</strong> Turun di Stasiun LRT TMII, lanjut shuttle bus gratis ke gerbang utama.</li>
+                <li><strong>TransJakarta:</strong> Rute 7D (Pancoran – TMII).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- MODAL 4: ANCOL -->
+    <div id="modal-ancol" class="modal" onclick="tutupLuar(event, 'modal-ancol')">
+        <div class="modal-box">
+            <span class="close-btn" onclick="tutupModal('modal-ancol')">&times;</span>
+            <img src="../ancol.jpg" alt="Taman Impian Jaya Ancol">
+            <h2>Taman Impian Jaya Ancol</h2>
+            <p><strong>Lokasi:</strong> Pademangan, Jakarta Utara (Pesisir Teluk Jakarta).</p>
+            <h4>1. Gambaran Umum</h4>
+            <p>Berdiri sejak tahun 1966 dengan luas sekitar 552 hektare, Ancol merupakan kawasan wisata pantai dan taman hiburan terpadu terbesar di Jakarta.</p>
+            <h4>2. Wahana & Zona Wisata</h4>
+            <ul>
+                <li><strong>Dunia Fantasi (Dufan):</strong> Taman hiburan dengan puluhan wahana permainan seru dan keluarga.</li>
+                <li><strong>Sea World Ancol & Samudra:</strong> Akuarium raksasa bawah laut dan edukasi satwa laut.</li>
+                <li><strong>Pantai Lagoon & Pantai Indah:</strong> Area tepi pantai untuk bersantai dan menikmati matahari terbenam.</li>
+            </ul>
+            <h4>3. Akses Transportasi</h4>
+            <ul>
+                <li><strong>TransJakarta:</strong> Koridor 5 (Kampung Melayu – Ancol) berhenti di dalam kawasan Ancol.</li>
+                <li><strong>KRL Commuter Line:</strong> Stasiun Ancol atau Stasiun Kampung Bandan.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- MODAL 5: KEPULAUAN SERIBU -->
+    <div id="modal-seribu" class="modal" onclick="tutupLuar(event, 'modal-seribu')">
+        <div class="modal-box">
+            <span class="close-btn" onclick="tutupModal('modal-seribu')">&times;</span>
+            <img src="../pulauseribu.jpg" alt="Kepulauan Seribu">
+            <h2>Kepulauan Seribu</h2>
+            <p><strong>Lokasi:</strong> Kabupaten Administrasi Kepulauan Seribu, sebelah utara Teluk Jakarta.</p>
+            <h4>1. Gambaran Umum</h4>
+            <p>Gugusan lebih dari 110 pulau tropis yang menawarkan wisata bahari jernih, snorkeling terumbu karang, dan cagar alam sejarah.</p>
+            <h4>2. Pilihan Pulau Populer</h4>
+            <ul>
+                <li><strong>Pulau Tidung & Pulau Pari:</strong> Jembatan Cinta, Pantai Pasir Perawan, dan snorkeling.</li>
+                <li><strong>Pulau Pramuka:</strong> Penangkaran penyu sisik dan wisata edukasi mangrove.</li>
+                <li><strong>Pulau Onrust & Pulau Kelor:</strong> Wisata sejarah benteng peninggalan era kolonial.</li>
+            </ul>
+            <h4>3. Akses Penyeberangan Kapal</h4>
+            <ul>
+                <li><strong>Dermaga Kali Adem (Muara Angke):</strong> Kapal kayu dan kapal Dishub (berangkat pagi pukul 07.00–08.00 WIB).</li>
+                <li><strong>Dermaga Marina Ancol:</strong> Kapal cepat (<em>speedboat</em>) dengan waktu tempuh ±45–90 menit.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT UNTUK BUKA & TUTUP DETAIL -->
+    <script>
+        function bukaModal(id) {
+            document.getElementById(id).style.display = 'flex';
+        }
+        function tutupModal(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+        function tutupLuar(event, id) {
+            if (event.target.id === id) {
+                tutupModal(id);
+            }
+        }
+    </script>
+   
 
 </body>
 </html>
