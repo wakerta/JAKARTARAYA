@@ -161,6 +161,72 @@
             .nav-links { display: none; }
             .hero h1 { font-size: 2rem; }
         }
+        /* Membuat kartu Monas terlihat bisa diklik */
+.card-clickable {
+    cursor: pointer;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+.card-clickable:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+.btn-detail {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #f5b942;
+    color: #111;
+    font-weight: bold;
+    border-radius: 6px;
+    font-size: 0.85rem;
+}
+
+/* Desain Jendela Pop-up (Modal) */
+.modal {
+    display: none; /* Tersembunyi sebelum diklik */
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.modal-box {
+    background: #fff;
+    max-width: 650px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    border-radius: 14px;
+    padding: 2rem;
+    position: relative;
+    line-height: 1.6;
+}
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
+}
+.close-btn:hover { color: #000; }
+.modal-box img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+.modal-box h2 { margin-bottom: 0.5rem; color: #111; }
+.modal-box h4 { margin-top: 1rem; margin-bottom: 0.3rem; color: #d4941c; }
+.modal-box ul { padding-left: 1.2rem; }
+
     </style>
 </head>
 <body>
@@ -200,7 +266,7 @@
         <!-- Wadah Utama Semua Kartu (Grid / Flex) -->
 <div class="destinations-grid"> <!-- sesuaikan nama class pembungkus luar dengan CSS kamu -->
         <!-- KARTU 1: MONAS -->
-    <div class="card" id="monas">
+   <div class="card card-clickable" id="monas" onclick="bukaModal('modal-monas')">
         <img src="monas.jpg" alt="Monumen Nasional">
         <div class="card-content">
             <h3>Monumen Nasional (Monas)</h3>
@@ -213,6 +279,7 @@
                     <li>Puncak: Dewasa Rp24.000 | Pelajar Rp6.000</li>
                 </ul>
             </div>
+             <span class="btn-detail">Klik untuk Detail Lengkap →</span>
         </div>
     </div>
 
