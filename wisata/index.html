@@ -166,45 +166,44 @@
             <p>Pilih tujuan wisata favorit Anda beserta informasi harga tiket masuk terbaru</p>
         </div>
 
-        <div class="grid">
-            <!-- Kartu 1 -->
- <div class="card" id="tmii"> 
-           </div>
-                <img src="monas.jpg" alt="Monumen Nasional">
-                <div class="card-body">
-                    <div>
-                        <h3>Monumen Nasional (Monas)</h3>
-                        <p>Ikon kemerdekaan Indonesia setinggi 132 meter dengan museum sejarah dan pelataran puncak panorama kota Jakarta.</p>
-                    </div>
-                    <div class="tiket-info">
-                        <strong>Tiket Masuk & Jam Buka:</strong>
-                        <ul>
-                            <li>Taman: Gratis (06.00–22.00 WIB)</li>
-                            <li>Museum: Dewasa Rp8.000 | Pelajar Rp3.000</li>
-                            <li>Puncak: Dewasa Rp24.000 | Pelajar Rp6.000</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <!-- Wadah Utama Semua Kartu (Grid / Flex) -->
+<div class="destinations-grid"> <!-- sesuaikan nama class pembungkus luar dengan CSS kamu -->
 
-           <!-- Kartu Kedua: Kota Tua Jakarta -->
-<div class="card" id="kotatua">
-    <img src="kotatua.jpg" alt="Kawasan Kota Tua Jakarta">
-            <div class="card-body"> <!-- sesuaikan nama class ini dengan yang dipakai di kartu Monas -->
-                 <div>
-                    <h3>Kawasan Kota Tua Jakarta</h3>
-                    <p>Menjelajahi bangunan bersejarah peninggalan era Batavia, Museum Fatahillah, serta suasana klasik Taman Fatahillah.</p>
-                 </div>
-                 <div class="tiket-info">
-                        <strong>Tiket Masuk & Jam Buka:</strong>
-                        <ul>
-                            <li>Area Taman Fatahillah: Gratis</li>
-                            <li>Museum: Rp10.000 (Weekday) / Rp15.000 (Weekend)</li>
-                            <li>Pelajar/Anak: Rp5.000 (Tutup hari Senin)</li>
-                        </ul>
-                    </div>
-                </div>
+    <!-- KARTU 1: MONAS -->
+    <div class="card" id="monas">
+        <img src="../monas.jpg" alt="Monumen Nasional">
+        <div class="card-content"> <!-- sesuaikan nama class isi kartu dengan CSS kamu -->
+            <h3>Monumen Nasional (Monas)</h3>
+            <p>Ikon kemerdekaan Indonesia setinggi 132 meter dengan museum sejarah dan pelataran puncak panorama kota Jakarta.</p>
+            <div class="ticket-info"> <!-- sesuaikan dengan class kotak tiket kamu -->
+                <strong>Tiket Masuk & Jam Buka:</strong>
+                <ul>
+                    <li>Taman: Gratis (06.00–22.00 WIB)</li>
+                    <li>Museum: Dewasa Rp8.000 | Pelajar Rp3.000</li>
+                    <li>Puncak: Dewasa Rp24.000 | Pelajar Rp6.000</li>
+                </ul>
             </div>
+        </div>
+    </div>
+
+    <!-- KARTU 2: KOTA TUA -->
+    <div class="card" id="kotatua">
+        <img src="../kotatua.jpg" alt="Kawasan Kota Tua Jakarta">
+        <div class="card-content">
+            <h3>Kawasan Kota Tua Jakarta</h3>
+            <p>Menjelajahi bangunan bersejarah peninggalan era Batavia, Museum Fatahillah, serta suasana klasik Taman Fatahillah.</p>
+            <div class="ticket-info">
+                <strong>Tiket Masuk & Jam Buka:</strong>
+                <ul>
+                    <li>Area Taman Fatahillah: Gratis</li>
+                    <li>Museum: Rp10.000 (Weekday) / Rp15.000 (Weekend)</li>
+                    <li>Pelajar/Anak: Rp5.000 (Tutup hari Senin)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
 
             <!-- Kartu 3 -->
            <div class="card" id="tmii"> 
