@@ -272,6 +272,19 @@
             <li><a href="#kepulauanseribu">Kepulauan Seribu</a></li>
         </ul>
     </li>
+     <nav>
+        <a href="#" class="logo">Jakarta<span>KULINER</span></a>
+       <ul class="nav-links">
+    <li class="dropdown">
+        <a href="#kuliner">KULINER ▾</a>
+        <ul class="dropdown-menu">
+            <li><a href="#kerak">Kerak Telor</a></li>
+            <li><a href="#gadogado">Gado-gado</a></li>
+            <li><a href="#putumayang">Putu Mayang</a></li>
+            <li><a href="#lupis">Lupis</a></li>
+            <li><a href="#selendangmayang">Selendang Mayang</a></li>
+       </ul>
+    </li>    
     <li><a href="#about">About Us</a></li>
     <li><a href="#packages">Packages & Offers</a></li>
     <li><a href="#gallery">Gallery</a></li>
@@ -502,6 +515,161 @@
             </ul>
         </div>
     </div>
+<!-- BAGIAN DAFTAR KULINER KHAS JAKARTA -->
+<section id="kuliner" class="section">
+    <div class="section-title">
+        <h2>Kuliner Khas Jakarta</h2>
+        <p>Cicipi beragam hidangan legendaris khas Betawi dan ibu kota yang wajib dicoba</p>
+    </div>
+
+    <div class="destinations-grid">
+        <!-- KULINER 1: KERAK TELOR -->
+        <div class="card card-clickable" id="kerak" onclick="bukaModal('modal-kerak')">
+            <img src="../keraktelor.jpg" alt="Kerak Telor">
+            <div class="card-content">
+                <h3>Kerak Telor</h3>
+                <p>Makanan ikonik khas Betawi berbahan beras ketan putih, telur ayam atau bebek, ebi sangrai, dan serundeng kelapa gurih.</p>
+                <div class="tiket-info">
+                    <strong>Kisaran Harga & Lokasi Populer:</strong>
+                    <ul>
+                        <li>Harga: Rp25.000 – Rp35.000 / porsi</li>
+                        <li>Lokasi: Area Monas, Kota Tua, & Setu Babakan</li>
+                    </ul>
+                </div>
+                <span class="btn-detail">Klik untuk Detail Lengkap →</span>
+            </div>
+        </div>
+
+        <!-- KULINER 2: GADO-GADO -->
+        <div class="card card-clickable" id="gadogado" onclick="bukaModal('modal-gadogado')">
+            <img src="../gadogado.jpg" alt="Gado-gado Jakarta">
+            <div class="card-content">
+                <h3>Gado-gado Betawi</h3>
+                <p>Sajian sayuran segar rebus, lontong, tahu, tempe, dan telur yang disiram bumbu kacang kental beraroma jeruk limau.</p>
+                <div class="tiket-info">
+                    <strong>Kisaran Harga & Lokasi Populer:</strong>
+                    <ul>
+                        <li>Harga: Rp20.000 – Rp40.000 / porsi</li>
+                        <li>Lokasi: Gado-gado Bonbin (Cikini) & Boplo</li>
+                    </ul>
+                </div>
+                <span class="btn-detail">Klik untuk Detail Lengkap →</span>
+            </div>
+        </div>
+
+        <!-- KULINER 3: PUTU MAYANG -->
+        <div class="card card-clickable" id="putumayang" onclick="bukaModal('modal-putumayang')">
+            <img src="../putumayang.jpg" alt="Putu Mayang">
+            <div class="card-content">
+                <h3>Putu Mayang</h3>
+                <p>Kue tradisional berbentuk gulungan mi warna-warni dari tepung beras yang disajikan dengan kuah kinca gula merah dan santan.</p>
+                <div class="tiket-info">
+                    <strong>Kisaran Harga & Lokasi Populer:</strong>
+                    <ul>
+                        <li>Harga: Rp10.000 – Rp20.000 / porsi</li>
+                        <li>Lokasi: Pasar Kue Subuh Senen & Setu Babakan</li>
+                    </ul>
+                </div>
+                <span class="btn-detail">Klik untuk Detail Lengkap →</span>
+            </div>
+        </div>
+
+        <!-- KULINER 4: LUPIS -->
+        <div class="card card-clickable" id="lupis" onclick="bukaModal('modal-lupis')">
+            <img src="../lupis.jpg" alt="Kue Lupis">
+            <div class="card-content">
+                <h3>Kue Lupis</h3>
+                <p>Kudapan manis dari beras ketan kenyal berbentuk segitiga yang dibalut parutan kelapa gurih dan siraman gula merah kental.</p>
+                <div class="tiket-info">
+                    <strong>Kisaran Harga & Lokasi Populer:</strong>
+                    <ul>
+                        <li>Harga: Rp10.000 – Rp15.000 / porsi</li>
+                        <li>Lokasi: Pasar Tradisional & Kuliner Pagi Jakarta</li>
+                    </ul>
+                </div>
+                <span class="btn-detail">Klik untuk Detail Lengkap →</span>
+            </div>
+        </div>
+
+        <!-- KULINER 5: SELENDANG MAYANG -->
+        <div class="card card-clickable" id="selendangmayang" onclick="bukaModal('modal-selendang')">
+            <img src="../selendangmayang.jpg" alt="Es Selendang Mayang">
+            <div class="card-content">
+                <h3>Es Selendang Mayang</h3>
+                <p>Minuman penyegar klasik Betawi berupa potongan kue kenyal berlapis warna merah-putih dengan kuah santan, sirup gula, dan es batu.</p>
+                <div class="tiket-info">
+                    <strong>Kisaran Harga & Lokasi Populer:</strong>
+                    <ul>
+                        <li>Harga: Rp10.000 – Rp15.000 / gelas</li>
+                        <li>Lokasi: Kawasan Kota Tua & Pekan Raya Jakarta</li>
+                    </ul>
+                </div>
+                <span class="btn-detail">Klik untuk Detail Lengkap →</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+           <!-- MODAL KULINER 1: KERAK TELOR -->
+<div id="modal-kerak" class="modal" onclick="tutupLuar(event, 'modal-kerak')">
+    <div class="modal-box">
+        <span class="close-btn" onclick="tutupModal('modal-kerak')">&times;</span>
+        <img src="../keraktelor.jpg" alt="Kerak Telor">
+        <h2>Kerak Telor Khas Betawi</h2>
+        <p><strong>Asal-usul:</strong> Hidangan tradisional masyarakat Betawi yang sudah ada sejak era kolonial Belanda dan kerap hadir dalam perayaan besar seperti HUT DKI Jakarta.</p>
+        <h4>Keunikan Pembuatan</h4>
+        <p>Dimasak di atas wajan cekung kecil menggunakan tungku arang tanpa minyak goreng. Saat setengah matang, wajan dibalik menghadap bara api hingga permukaan kerak telor matang kecokelatan dan beraroma asap khas.</p>
+    </div>
+</div>
+
+<!-- MODAL KULINER 2: GADO-GADO -->
+<div id="modal-gadogado" class="modal" onclick="tutupLuar(event, 'modal-gadogado')">
+    <div class="modal-box">
+        <span class="close-btn" onclick="tutupModal('modal-gadogado')">&times;</span>
+        <img src="../gadogado.jpg" alt="Gado-gado">
+        <h2>Gado-gado Betawi</h2>
+        <p><strong>Ciri Khas:</strong> Berbeda dengan pecel yang memakai kencur, bumbu kacang gado-gado Betawi diulek segar dengan campuran kacang mede atau kacang tanah sangrai, santan, gula merah, dan perasan jeruk limau.</p>
+        <h4>Isian Lengkap</h4>
+        <p>Terdiri dari kangkung, bayam, taoge, kacang panjang, kentang rebus, tahu, tempe, telur rebus, lontong, serta taburan bawang goreng dan kerupuk udang/emping.</p>
+    </div>
+</div>
+
+<!-- MODAL KULINER 3: PUTU MAYANG -->
+<div id="modal-putumayang" class="modal" onclick="tutupLuar(event, 'modal-putumayang')">
+    <div class="modal-box">
+        <span class="close-btn" onclick="tutupModal('modal-putumayang')">&times;</span>
+        <img src="../putumayang.jpg" alt="Putu Mayang">
+        <h2>Kue Putu Mayang</h2>
+        <p><strong>Ciri Khas:</strong> Terbuat dari tepung beras dan tepung kanji yang dicetak menyerupai untaian mi melingkar berwarna putih, merah muda, dan hijau pandan, lalu dikukus hingga lembut.</p>
+        <h4>Penyajian</h4>
+        <p>Disantap dengan siraman kuah kinca (campuran santan, gula aren, dan daun pandan) yang menghasilkan perpaduan rasa manis legit dan gurih.</p>
+    </div>
+</div>
+
+<!-- MODAL KULINER 4: LUPIS -->
+<div id="modal-lupis" class="modal" onclick="tutupLuar(event, 'modal-lupis')">
+    <div class="modal-box">
+        <span class="close-btn" onclick="tutupModal('modal-lupis')">&times;</span>
+        <img src="../lupis.jpg" alt="Kue Lupis">
+        <h2>Kue Lupis Ketan</h2>
+        <p><strong>Ciri Khas:</strong> Beras ketan pilihan dibungkus daun pisang membentuk segitiga atau silinder lalu direbus selama beberapa jam hingga teksturnya padat dan pulen.</p>
+        <h4>Penyajian</h4>
+        <p>Disajikan dengan taburan kelapa parut kukus yang diberi sedikit garam serta sirup gula merah kental beraroma pandan.</p>
+    </div>
+</div>
+
+<!-- MODAL KULINER 5: SELENDANG MAYANG -->
+<div id="modal-selendang" class="modal" onclick="tutupLuar(event, 'modal-selendang')">
+    <div class="modal-box">
+        <span class="close-btn" onclick="tutupModal('modal-selendang')">&times;</span>
+        <img src="../selendangmayang.jpg" alt="Es Selendang Mayang">
+        <h2>Es Selendang Mayang</h2>
+        <p><strong>Ciri Khas:</strong> Minuman penyegar legendaris Betawi yang kini mulai langka. Adonan utamanya terbuat dari tepung sagu aren dan tepung hunkwe yang dicetak berlapis-lapis sehingga kenyal dan lembut.</p>
+        <h4>Penyajian</h4>
+        <p>Potongan kue selendang mayang disiram kuah santan gurih, pemanis gula merah atau sirup merah, dan es batu serut—sangat cocok dinikmati di tengah cuaca Jakarta yang terik.</p>
+    </div>
+</div>
+
 
     <!-- JAVASCRIPT UNTUK BUKA & TUTUP DETAIL -->
     <script>
